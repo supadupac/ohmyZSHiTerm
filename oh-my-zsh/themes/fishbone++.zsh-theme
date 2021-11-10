@@ -43,8 +43,8 @@ local return_status="%(?:%{$fg[cyan]%}$prompt_string:%{$fg[red]%}$prompt_string%
 # set the git_prompt_info text
 ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg[blue](%{$reset_color%}%{$fg[yellow]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%{$fg[blue])%}"
-ZSH_THEME_GIT_PROMPT_DIRTY=" - ⚡"
-ZSH_THEME_GIT_PROMPT_CLEAN=" - 👍"
+ZSH_THEME_GIT_PROMPT_DIRTY=" → ⚡"
+ZSH_THEME_GIT_PROMPT_CLEAN=" → 👍"
 
 PROMPT='${newline}\
 ${host_name}${hosr}%{$reset_color%}@${time_string} ${line_mode}\
