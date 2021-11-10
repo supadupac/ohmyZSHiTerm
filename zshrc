@@ -8,7 +8,10 @@ export ZSH="/Users/chrislee/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+# ZSH_THEME = ""
+# ZSH_THEME="typewritten"
 ZSH_THEME="fishbone++"
+FISHBONEPP_LINE_MODE="singleline"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -88,7 +91,6 @@ npm
 rand-quote
 symfony2
 themes
-timer
 web-search
 )
 
@@ -119,11 +121,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#
-# alias code="open -a IntelliJ IDEA"
+alias ls="ls -la"
 
-code () { open -a "IntelliJ IDEA" --args $* ;}
-vscode () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
+jetcode () { open -a "IntelliJ IDEA" --args $* ;}
+code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
