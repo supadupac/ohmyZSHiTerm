@@ -48,13 +48,13 @@ ZSH_THEME_GIT_PROMPT_CLEAN=" - 👍"
 
 PROMPT='${newline}\
 ${host_name}${hosr}%{$reset_color%}@${time_string} ${line_mode}\
-${path_prefix}${path_string}${path_postfix}$(git_prompt_info)$(git_prompt_status)  \
+${path_prefix}${path_string}${path_postfix}$(git_prompt_info)$(git_prompt_status) \
 ${return_status} %{$reset_color%}'
 
 
-ZSH_THEME_GIT_PROMPT_ADDED="➕"
-ZSH_THEME_GIT_PROMPT_MODIFIED="✒️"
-ZSH_THEME_GIT_PROMPT_DELETED="➖"
-ZSH_THEME_GIT_PROMPT_RENAMED="⁉️"
+ZSH_THEME_GIT_PROMPT_ADDED=" 📬"
+ZSH_THEME_GIT_PROMPT_MODIFIED=" ✒️ "
+ZSH_THEME_GIT_PROMPT_DELETED="🗑"
+ZSH_THEME_GIT_PROMPT_RENAMED="⁉️ "
 ZSH_THEME_GIT_PROMPT_UNMERGED="🥺"
-ZSH_THEME_GIT_PROMPT_UNTRACKED="🚝"
+ZSH_THEME_GIT_PROMPT_UNTRACKED="🚝 "
