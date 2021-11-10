@@ -1,4 +1,5 @@
 
+# i editted this file, it's not mine.
 local username="%n"
 local path_prefix="%{$fg[yellow]%}["
 local path_string="%{$fg[blue]%}%~"

@@ -122,11 +122,32 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ls="ls -la"
+alias finder="open ."
 
-jetcode () { open -a "IntelliJ IDEA" --args $* ;}
+# Openning and starting services and programs
+make-meadmin () { open -a "Make Me Admin"}
+open-intellij () { open -a "IntelliJ Idea"}
+ddev-start () { zsh ~/.chrislee-scripts/ddev-start.zsh }
+
+# Closing or stopping programs
+ddev-shutdown () { zsh ~/.chrislee-scripts/ddev-stop.zsh }
+quit-docker () { open -a "Close Docker" }
+
+# Open files in programs
+intellijcode () { open -a "IntelliJ IDEA" --args $* ;}
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 
-
+# Syntax ZSH Help
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+eval $(thefuck --alias)
 
+# File Management
+backup-terminal () {
+    cp ~/.zshrc zshrc
+    cp ~/.oh-my-zsh/themes/fishbone++.zsh-theme ~/Documents/Developer/terminal/oh-my-zsh/themes/fishbone++.zsh-theme
+    cd ~/Documents/Developer/terminal
+    gaa
+    gcmsg "automatic push"
+    gp
+}
