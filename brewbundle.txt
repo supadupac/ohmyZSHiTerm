@@ -1,0 +1,2 @@
+The bundle the Brewfile, type "brew bundle"
+-- Ensure to have brew bundle installed
