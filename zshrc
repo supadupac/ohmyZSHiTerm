@@ -131,7 +131,14 @@ ddev-start () { zsh ~/.chrislee-scripts/ddev-start.zsh }
 
 # Closing or stopping programs
 ddev-shutdown () { zsh ~/.chrislee-scripts/ddev-stop.zsh }
+quit-everything () { open -a "Close Everything"}
 quit-docker () { open -a "Close Docker" }
+shutdown-now () {
+    quit-everything
+    open -a "iTerm"
+    make-meadmin
+    shutdown
+}
 
 # Open files in programs
 intellijcode () { open -a "IntelliJ IDEA" --args $* ;}
