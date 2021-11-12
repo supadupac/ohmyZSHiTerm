@@ -160,12 +160,4 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 eval $(thefuck --alias)
 
 # File Management
-bu-terminal () {
-    cp ~/.zshrc ~/Documents/Developer/terminal/zshrc
-    cp ~/.oh-my-zsh/themes/fishbone++.zsh-theme ~/Documents/Developer/terminal/oh-my-zsh/themes/fishbone++.zsh-theme
-    cd ~/Documents/Developer/terminal
-    gaa
-    gcmsg "automatic push"
-    gp
-    cd ~/
-}
+alias bu-terminal { "zsh ~/.chrislee-scripts/bu-terminal.zsh"}
