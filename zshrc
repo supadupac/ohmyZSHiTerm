@@ -122,26 +122,36 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ls="ls -la"
-alias finder="open ."
+
+# Custom DDEV Commands
+alias dd="ddev"
+dd-start () { zsh ~/.chrislee-scripts/ddev-start.zsh }
+dd-stop () { zsh ~/.chrislee-scripts/ddev-stop.zsh }
+dd-d9-reset () { zsh ~/.chrislee-scripts/ddev-d9-db-reset.zsh }
+
+# Local Drush Commands
+alias d="ddev exec drush"
+alias d-cbs="ddev exec drush en cbs_migrations -y"
+alias trial="zsh ~/.chrislee-scripts/trial.zsh"
+
+# Openning websites
+alias cbsd9dest="open https://cbsd9dest.dev/user"
+alias cbsd7dest="open https://cbsd7src.dev/user"
+alias gitd9="open https://github.umn.edu/CBS-RLT/cbs_umn_edu"
+alias d9="open https://d9.cbs.umn.edu"
 
 # Openning and starting services and programs
-make-meadmin () { open -a "Make Me Admin"}
-open-intellij () { open -a "IntelliJ Idea"}
-ddev-start () { zsh ~/.chrislee-scripts/ddev-start.zsh }
+alias finder="open ."
+makemeadmin () { open -a "Make Me Admin"}
+intellij () { open -a "IntelliJ Idea"}
+anyconnect () { open -a "Cisco AnyConnect Secure Mobility Client"}
+safari () { open -a "Safari"}
 
 # Closing or stopping programs
-ddev-shutdown () { zsh ~/.chrislee-scripts/ddev-stop.zsh }
-quit-everything () { open -a "Close Everything"}
 quit-docker () { open -a "Close Docker" }
-shutdown-now () {
-    quit-everything
-    open -a "iTerm"
-    make-meadmin
-    shutdown
-}
 
 # Open files in programs
-intellijcode () { open -a "IntelliJ IDEA" --args $* ;}
+code-intellij () { open -a "IntelliJ IDEA" --args $* ;}
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 
 # Syntax ZSH Help
@@ -151,10 +161,11 @@ eval $(thefuck --alias)
 
 # File Management
 backup-terminal () {
-    cp ~/.zshrc zshrc
+    cp ~/.zshrc ~/Documents/Developer/terminal/zshrc
     cp ~/.oh-my-zsh/themes/fishbone++.zsh-theme ~/Documents/Developer/terminal/oh-my-zsh/themes/fishbone++.zsh-theme
     cd ~/Documents/Developer/terminal
     gaa
     gcmsg "automatic push"
     gp
+    cd ~/
 }
