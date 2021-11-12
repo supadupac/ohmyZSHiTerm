@@ -125,9 +125,9 @@ alias ls="ls -la"
 
 # Custom DDEV Commands
 alias dd="ddev"
-dd-start () { zsh ~/.chrislee-scripts/ddev-start.zsh }
-dd-stop () { zsh ~/.chrislee-scripts/ddev-stop.zsh }
-dd-d9-reset () { zsh ~/.chrislee-scripts/ddev-d9-db-reset.zsh }
+alias dd-start="zsh ~/.chrislee-scripts/ddev-start.zsh"
+alias dd-stop="zsh ~/.chrislee-scripts/ddev-stop.zsh"
+alias dd-d9-reset"zsh ~/.chrislee-scripts/ddev-d9-db-reset.zsh"
 
 # Local Drush Commands
 alias d="ddev exec drush"
@@ -145,7 +145,7 @@ alias finder="open ."
 makemeadmin () { open -a "Make Me Admin"}
 intellij () { open -a "IntelliJ Idea"}
 anyconnect () { open -a "Cisco AnyConnect Secure Mobility Client"}
-safari () { open -a "Safari"}
+alias safari="open -a Safari"
 
 # Closing or stopping programs
 quit-docker () { open -a "Close Docker" }
@@ -160,4 +160,4 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 eval $(thefuck --alias)
 
 # File Management
-alias bu-terminal { "zsh ~/.chrislee-scripts/bu-terminal.zsh"}
+alias bu-terminal="zsh ~/.chrislee-scripts/bu-terminal.zsh"
