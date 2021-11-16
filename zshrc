@@ -123,11 +123,13 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ls="ls -la"
 
-# Custom DDEV Commands
+# Custom DDEV Commandsi
 alias dd="ddev"
 alias dd-start="zsh ~/.chrislee-scripts/ddev-start.zsh"
 alias dd-stop="zsh ~/.chrislee-scripts/ddev-stop.zsh"
-alias dd-d9-reset"zsh ~/.chrislee-scripts/ddev-d9-db-reset.zsh"
+alias dd-d9-reset="zsh ~/.chrislee-scripts/ddev-d9-db-reset.zsh"
+devel () { ddev exec drush en devel
+ddev exec drush en devel_generate }
 
 # Local Drush Commands
 alias d="ddev exec drush"
@@ -144,6 +146,7 @@ alias d9="open https://d9.cbs.umn.edu"
 alias finder="open ."
 makemeadmin () { open -a "Make Me Admin"}
 intellij () { open -a "IntelliJ Idea"}
+datagrip () { open -a "IntelliJ Idea"}
 anyconnect () { open -a "Cisco AnyConnect Secure Mobility Client"}
 alias safari="open -a Safari"
 

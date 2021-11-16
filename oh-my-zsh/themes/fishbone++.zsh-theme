@@ -1,12 +1,16 @@
 
 # i editted this file, it's not mine.
+# Credit to user EYH0602 on Github; 
+# https://github.com/EYH0602/Fishbonepp/blob/master/fishbone%2B%2B.zsh-theme
+
 local username="%n"
 local path_prefix="%{$fg[yellow]%}["
 local path_string="%{$fg[blue]%}%~"
 local path_postfix="%{$fg[yellow]%}]"
 local prompt_string=">> "
 local local_time="%T"
-local newline=$''
+local newline=$'\n'
+# local newline=$''
 local line_mode=$'\n'
 
 # customize user settings
@@ -42,14 +46,15 @@ local return_status="%(?:%{$fg[cyan]%}$prompt_string:%{$fg[red]%}$prompt_string%
 
 
 # set the git_prompt_info text
-ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg[blue](%{$reset_color%}%{$fg[yellow]%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[blue]\n(%{$reset_color%}%{$fg[yellow]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%{$fg[blue])%}"
 ZSH_THEME_GIT_PROMPT_DIRTY=" → ⚡"
 ZSH_THEME_GIT_PROMPT_CLEAN=" → 👍"
 
 PROMPT='${newline}\
 ${host_name}${hosr}%{$reset_color%}@${time_string} ${line_mode}\
-${path_prefix}${path_string}${path_postfix}$(git_prompt_info)$(git_prompt_status) \
+${path_prefix}${path_string}${path_postfix}\
+$(git_prompt_info)$(git_prompt_status) \
 ${return_status} %{$reset_color%}'
 
 
