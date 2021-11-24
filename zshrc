@@ -134,6 +134,7 @@ ddev exec drush en devel_generate }
 # Local Drush Commands
 alias d="ddev exec drush"
 alias d-cbs="ddev exec drush en cbs_migrations -y"
+alias d-entites="zsh ~/.chrislee-scripts/ddev-d9-list-entities.zsh"
 alias trial="zsh ~/.chrislee-scripts/trial.zsh"
 
 # Openning websites
@@ -141,20 +142,21 @@ alias cbsd9dest="open https://cbsd9dest.dev/user"
 alias cbsd7dest="open https://cbsd7src.dev/user"
 alias gitd9="open https://github.umn.edu/CBS-RLT/cbs_umn_edu"
 alias d9="open https://d9.cbs.umn.edu"
+alias d7="open https://cbs.dev.umn/edu"
 
 # Openning and starting services and programs
 alias finder="open ."
 makemeadmin () { open -a "Make Me Admin"}
 intellij () { open -a "IntelliJ Idea"}
-datagrip () { open -a "IntelliJ Idea"}
+datagrip () { open -a "Datagrip"}
 anyconnect () { open -a "Cisco AnyConnect Secure Mobility Client"}
 alias safari="open -a Safari"
+alias monday-cbs="open https://cbs-rlt-team.monday.com/boards/503813320"
 
 # Closing or stopping programs
 quit-docker () { open -a "Close Docker" }
 
 # Open files in programs
-code-intellij () { open -a "IntelliJ IDEA" --args $* ;}
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 
 # Syntax ZSH Help
