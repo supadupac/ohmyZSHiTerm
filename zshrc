@@ -123,13 +123,14 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ls="ls -la"
 
-# Custom DDEV Commandsi
+# Custom DDEV Commands
 alias dd="ddev"
 alias dd-start="zsh ~/.chrislee-scripts/ddev-start.zsh"
 alias dd-stop="zsh ~/.chrislee-scripts/ddev-stop.zsh"
 alias dd-d9-reset="zsh ~/.chrislee-scripts/ddev-d9-db-reset.zsh"
 devel () { ddev exec drush en devel
 ddev exec drush en devel_generate }
+alias dd-d9-config-reset="zsh ~/.chrislee-scripts/ddev-config-reset.zsh"
 
 # Local Drush Commands
 alias d="ddev exec drush"
@@ -139,10 +140,12 @@ alias trial="zsh ~/.chrislee-scripts/trial.zsh"
 
 # Openning websites
 alias cbsd9dest="open https://cbsd9dest.dev/user"
-alias cbsd7dest="open https://cbsd7src.dev/user"
+alias cbsd7src="open https://cbsd7src.dev/user"
 alias gitd9="open https://github.umn.edu/CBS-RLT/cbs_umn_edu"
-alias d9="open https://d9.cbs.umn.edu"
-alias d7="open https://cbs.dev.umn/edu"
+alias cbsd9="open https://d9.cbs.umn.edu/user"
+alias cbsd7="open https://cbs.dev.umn.edu/saml_login"
+alias gdrivetestnodes="open https://docs.google.com/spreadsheets/d/1hevnRjh0UbqgfpJ3N2syjceYCszgTuF7qUz8W-YsMEM/edit#gid=0"
+alias mondaycbssite="open https://cbs-rlt-team.monday.com/boards/503813320"
 
 # Openning and starting services and programs
 alias finder="open ."
@@ -151,7 +154,7 @@ intellij () { open -a "IntelliJ Idea"}
 datagrip () { open -a "Datagrip"}
 anyconnect () { open -a "Cisco AnyConnect Secure Mobility Client"}
 alias safari="open -a Safari"
-alias monday-cbs="open https://cbs-rlt-team.monday.com/boards/503813320"
+alias workonmigrations="zsh ~/.chrislee-scripts/work-on-migrations.zsh"
 
 # Closing or stopping programs
 quit-docker () { open -a "Close Docker" }
