@@ -144,17 +144,20 @@ alias cbsd7src="open https://cbsd7src.dev/user"
 alias gitd9="open https://github.umn.edu/CBS-RLT/cbs_umn_edu"
 alias cbsd9="open https://d9.cbs.umn.edu/user"
 alias cbsd7="open https://cbs.dev.umn.edu/saml_login"
+alias cbsd9dev="open https://cbs-d9.dev.umn.edu/saml_login"
 alias gdrivetestnodes="open https://docs.google.com/spreadsheets/d/1hevnRjh0UbqgfpJ3N2syjceYCszgTuF7qUz8W-YsMEM/edit#gid=0"
 alias mondaycbssite="open https://cbs-rlt-team.monday.com/boards/503813320"
+alias umn-d-management="open https://drupalmanagement.umn.edu"
 
-# Openning and starting services and programs
+# Opening and starting services and programs
 alias finder="open ."
-makemeadmin () { open -a "Make Me Admin"}
-intellij () { open -a "IntelliJ Idea"}
-datagrip () { open -a "Datagrip"}
-anyconnect () { open -a "Cisco AnyConnect Secure Mobility Client"}
+makemeadmin () { open -a "Make Me Admin" }
+datagrip () { open -a "Datagrip" }
+anyconnect () { open -a "Cisco AnyConnect Secure Mobility Client" }
 alias safari="open -a Safari"
 alias workonmigrations="zsh ~/.chrislee-scripts/work-on-migrations.zsh"
+idea-zsh () { idea --wait ~/.zshrc }
+alias idea-scripts="idea ~/Documents/Developer/scripts"
 
 # Closing or stopping programs
 quit-docker () { open -a "Close Docker" }
